@@ -1,20 +1,15 @@
-# secure-chat
+# Server
 
-A private, end-to-end encrypted 1:1 chat application designed so that message encryption and decryption occur only on user devices. The server is intended to handle message delivery, storage of ciphertext, and public key distribution without access to plaintext message content.
+The server component is responsible for:
 
-## Status
+- Storing encrypted message ciphertext only.
+- Storing and distributing public keys as needed.
+- Relaying messages between clients over WebSockets.
+- Managing connectivity and message delivery infrastructure.
 
-Phase 1 in progress.
+Security requirements:
 
-## Project structure
-
-```text
-.
-├── README.md
-├── .env.example
-├── client/
-│   └── README.md
-├── server/
-│   └── README.md
-└── docs/
-    └── README.md
+- The server must never have access to plaintext message content.
+- The server must never perform message decryption.
+- The server must never log message content.
+- All message payloads should be treated as opaque ciphertext.
