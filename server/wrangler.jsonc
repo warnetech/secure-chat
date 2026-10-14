@@ -1,5 +1,12 @@
 {
   "name": "secure-chat",
   "main": "src/index.ts",
-  "compatibility_date": "2026-10-01"
+  "compatibility_date": "2026-10-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "secure-chat-db",
+      "database_id": "789a15a1-923f-4261-a126-ea0a2c80b349"
+    }
+  ]
 }
